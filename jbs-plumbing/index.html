@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JBS Plumbing, Inc. — Professional Plumbing Services</title>
+  <meta name="description" content="JBS Plumbing, Inc. — Licensed, insured plumbing experts. 24/7 emergency service. Water heaters, drain cleaning, leak repair & more. Call now!" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary:   '#1E40AF',
+            secondary: '#3B82F6',
+            cta:       '#F97316',
+            'cta-dark':'#EA6C00',
+            surface:   '#EFF6FF',
+            'text-main':'#1E3A8A',
+          },
+          fontFamily: {
+            heading: ['Poppins', 'sans-serif'],
+            body:    ['Open Sans', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Open Sans', sans-serif; color: #1e293b; }
+    h1,h2,h3,h4,h5 { font-family: 'Poppins', sans-serif; }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+    .hero-bg {
+      background: linear-gradient(135deg, #1E3A8A 0%, #1E40AF 50%, #1d4ed8 100%);
+    }
+    .stat-card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .stat-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(30,64,175,0.18); }
+    .service-card { transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; }
+    .service-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(30,64,175,0.15); border-color: #3B82F6; }
+    .testimonial-card { transition: box-shadow 0.2s ease; }
+    .testimonial-card:hover { box-shadow: 0 12px 36px rgba(30,64,175,0.14); }
+    .btn-cta { transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease; }
+    .btn-cta:hover { background-color: #EA6C00; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(249,115,22,0.4); }
+    .btn-cta:active { transform: translateY(0); }
+    .nav-link { transition: color 0.15s ease; }
+    .nav-link:hover { color: #F97316; }
+    .badge-pulse { animation: pulse-ring 2.5s ease-in-out infinite; }
+    @keyframes pulse-ring {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(249,115,22,0.4); }
+      50% { box-shadow: 0 0 0 10px rgba(249,115,22,0); }
+    }
+    .input-field {
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .input-field:focus {
+      outline: none;
+      border-color: #3B82F6;
+      box-shadow: 0 0 0 3px rgba(59,130,246,0.2);
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-white">
+
+<!-- ═══════════════════════════════════════════════
+     TOP EMERGENCY BAR
+════════════════════════════════════════════════ -->
+<div class="bg-cta text-white text-center py-2 px-4 text-sm font-semibold tracking-wide">
+  <span>24/7 Emergency Plumbing — Call Us Now: </span>
+  <a href="tel:+15551234567" class="underline hover:no-underline font-bold focus:outline-none focus:ring-2 focus:ring-white">(555) 123-4567</a>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════════════ -->
+<nav id="navbar" class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm" aria-label="Main navigation">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-primary rounded-md" aria-label="JBS Plumbing home">
+        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+          <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+            <path d="M8 12h8M12 8v8"/>
+          </svg>
+        </div>
+        <div>
+          <span class="font-heading font-bold text-primary text-xl leading-none">JBS Plumbing</span>
+          <span class="block text-xs text-gray-500 leading-none font-body">Inc.</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex items-center gap-7">
+        <a href="#services" class="nav-link text-gray-700 font-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary rounded">Services</a>
+        <a href="#about" class="nav-link text-gray-700 font-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary rounded">About</a>
+        <a href="#why-us" class="nav-link text-gray-700 font-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary rounded">Why Us</a>
+        <a href="#testimonials" class="nav-link text-gray-700 font-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary rounded">Reviews</a>
+        <a href="#contact" class="nav-link text-gray-700 font-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary rounded">Contact</a>
+        <a href="tel:+15551234567"
+           class="btn-cta bg-cta text-white font-heading font-semibold text-sm px-5 py-2.5 rounded-lg cursor-pointer focus:outline-none focus:ring-2 focus:ring-cta focus:ring-offset-2 flex items-center gap-2">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14z"/>
+          </svg>
+          Call Now
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button id="menu-btn" class="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg id="menu-icon-open" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        <svg id="menu-icon-close" class="w-6 h-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 pb-4 pt-2">
+    <div class="flex flex-col gap-1">
+      <a href="#services" class="py-2 px-3 rounded-lg text-gray-700 font-medium hover:bg-surface focus:outline-none focus:ring-2 focus:ring-primary mobile-link">Services</a>
+      <a href="#about"    class="py-2 px-3 rounded-lg text-gray-700 font-medium hover:bg-surface focus:outline-none focus:ring-2 focus:ring-primary mobile-link">About</a>
+      <a href="#why-us"   class="py-2 px-3 rounded-lg text-gray-700 font-medium hover:bg-surface focus:outline-none focus:ring-2 focus:ring-primary mobile-link">Why Us</a>
+      <a href="#testimonials" class="py-2 px-3 rounded-lg text-gray-700 font-medium hover:bg-surface focus:outline-none focus:ring-2 focus:ring-primary mobile-link">Reviews</a>
+      <a href="#contact"  class="py-2 px-3 rounded-lg text-gray-700 font-medium hover:bg-surface focus:outline-none focus:ring-2 focus:ring-primary mobile-link">Contact</a>
+      <a href="tel:+15551234567" class="mt-2 btn-cta bg-cta text-white font-semibold text-center py-3 rounded-lg cursor-pointer focus:outline-none focus:ring-2 focus:ring-cta">Call (555) 123-4567</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════ -->
+<section class="hero-bg text-white" aria-labelledby="hero-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+
+      <!-- Left: Copy -->
+      <div class="fade-in">
+        <!-- Trust badge -->
+        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
+          <svg class="w-4 h-4 text-cta" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+          <span class="text-sm font-medium">Licensed &amp; Insured Since 1998</span>
+        </div>
+
+        <h1 id="hero-heading" class="font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight mb-6">
+          Your Trusted <span class="text-cta">Plumbing</span> Experts — Day or Night
+        </h1>
+        <p class="text-blue-100 text-lg leading-relaxed mb-8 max-w-lg">
+          JBS Plumbing, Inc. delivers fast, reliable, and affordable plumbing solutions for homeowners and businesses. No surprises — just quality work done right the first time.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 mb-10">
+          <a href="tel:+15551234567"
+             class="btn-cta badge-pulse bg-cta font-heading font-semibold text-lg px-8 py-4 rounded-xl cursor-pointer text-center focus:outline-none focus:ring-2 focus:ring-white flex items-center justify-center gap-3">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14z"/>
+            </svg>
+            Call (555) 123-4567
+          </a>
+          <a href="#contact"
+             class="border-2 border-white/60 text-white font-heading font-semibold text-lg px-8 py-4 rounded-xl cursor-pointer text-center hover:bg-white/10 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white">
+            Get a Free Quote
+          </a>
+        </div>
+
+        <!-- Trust signals row -->
+        <div class="flex flex-wrap gap-5 text-sm text-blue-100">
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-green-400 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            <span>Free Estimates</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-green-400 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            <span>Same-Day Service</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-green-400 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            <span>Workmanship Guarantee</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-green-400 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            <span>No Hidden Fees</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Stats card -->
+      <div class="fade-in grid grid-cols-2 gap-4">
+        <div class="stat-card bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center cursor-default">
+          <div class="font-heading font-bold text-4xl text-white mb-1">25+</div>
+          <div class="text-blue-200 text-sm font-medium">Years in Business</div>
+        </div>
+        <div class="stat-card bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center cursor-default">
+          <div class="font-heading font-bold text-4xl text-white mb-1">4,800+</div>
+          <div class="text-blue-200 text-sm font-medium">Jobs Completed</div>
+        </div>
+        <div class="stat-card bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center cursor-default">
+          <div class="font-heading font-bold text-4xl text-cta mb-1">4.9★</div>
+          <div class="text-blue-200 text-sm font-medium">Google Rating</div>
+        </div>
+        <div class="stat-card bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center cursor-default">
+          <div class="font-heading font-bold text-4xl text-white mb-1">24/7</div>
+          <div class="text-blue-200 text-sm font-medium">Emergency Support</div>
+        </div>
+
+        <!-- Badge row -->
+        <div class="col-span-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-4 flex items-center justify-around gap-3">
+          <div class="text-center">
+            <div class="w-10 h-10 bg-green-500/20 border border-green-400/40 rounded-lg flex items-center justify-center mx-auto mb-1">
+              <svg class="w-5 h-5 text-green-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+            <div class="text-xs text-blue-200">Licensed</div>
+          </div>
+          <div class="text-center">
+            <div class="w-10 h-10 bg-blue-500/20 border border-blue-400/40 rounded-lg flex items-center justify-center mx-auto mb-1">
+              <svg class="w-5 h-5 text-blue-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <div class="text-xs text-blue-200">Insured</div>
+          </div>
+          <div class="text-center">
+            <div class="w-10 h-10 bg-yellow-500/20 border border-yellow-400/40 rounded-lg flex items-center justify-center mx-auto mb-1">
+              <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+            <div class="text-xs text-blue-200">Top Rated</div>
+          </div>
+          <div class="text-center">
+            <div class="w-10 h-10 bg-purple-500/20 border border-purple-400/40 rounded-lg flex items-center justify-center mx-auto mb-1">
+              <svg class="w-5 h-5 text-purple-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>
+              </svg>
+            </div>
+            <div class="text-xs text-blue-200">Certified</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     PROBLEM STATEMENT BAND
+════════════════════════════════════════════════ -->
+<section class="bg-gray-900 text-white py-10 px-4" aria-label="Common plumbing problems">
+  <div class="max-w-7xl mx-auto">
+    <p class="text-center text-gray-400 text-sm font-semibold uppercase tracking-widest mb-6">Sound familiar?</p>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+      <div class="flex flex-col items-center gap-2 p-4">
+        <svg class="w-7 h-7 text-cta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <path d="M12 2a7 7 0 017 7c0 5-7 13-7 13S5 14 5 9a7 7 0 017-7z"/><circle cx="12" cy="9" r="2.5"/>
+        </svg>
+        <span class="text-sm text-gray-300 font-medium">Burst Pipes</span>
+      </div>
+      <div class="flex flex-col items-center gap-2 p-4">
+        <svg class="w-7 h-7 text-cta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0018 0V5"/><path d="M3 12a9 3 0 0018 0"/>
+        </svg>
+        <span class="text-sm text-gray-300 font-medium">Clogged Drains</span>
+      </div>
+      <div class="flex flex-col items-center gap-2 p-4">
+        <svg class="w-7 h-7 text-cta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <path d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+        </svg>
+        <span class="text-sm text-gray-300 font-medium">Water Leaks</span>
+      </div>
+      <div class="flex flex-col items-center gap-2 p-4">
+        <svg class="w-7 h-7 text-cta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <path d="M3 17h3l2-8 3 12 2-8 2 4h6"/><path d="M5 5h14"/>
+        </svg>
+        <span class="text-sm text-gray-300 font-medium">No Hot Water</span>
+      </div>
+    </div>
+    <p class="text-center text-white font-heading font-semibold text-xl mt-6">
+      JBS Plumbing solves them — <span class="text-cta">fast.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     SERVICES
+════════════════════════════════════════════════ -->
+<section id="services" class="bg-surface py-20 px-4" aria-labelledby="services-heading">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-14 fade-in">
+      <span class="inline-block bg-primary/10 text-primary font-semibold text-sm px-4 py-1.5 rounded-full mb-4 uppercase tracking-wider">What We Do</span>
+      <h2 id="services-heading" class="font-heading font-bold text-3xl md:text-4xl text-text-main mb-4">Complete Plumbing Solutions</h2>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">From routine maintenance to full remodels and emergency repairs — we handle it all with precision and care.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Service 1 -->
+      <article class="service-card bg-white border border-gray-200 rounded-2xl p-7 cursor-default" aria-label="Emergency Plumbing service">
+        <div class="w-14 h-14 bg-red-50 border border-red-100 rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-7 h-7 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+        </div>
+        <h3 class="font-heading font-semibold text-lg text-text-main mb-2">Emergency Repairs</h3>
+        <p class="text-gray-600 text-sm leading-relaxed mb-4">Burst pipes, severe leaks, sewer backups — we dispatch within the hour, 24/7, including holidays. No extra charge for nights or weekends.</p>
+        <ul class="space-y-1.5 text-sm text-gray-500">
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>1-Hour Response</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>24/7 Availability</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>No After-Hours Surcharge</li>
+        </ul>
+      </article>
+
+      <!-- Service 2 -->
+      <article class="service-card bg-white border border-gray-200 rounded-2xl p-7 cursor-default" aria-label="Drain Cleaning service">
+        <div class="w-14 h-14 bg-blue-50 border border-blue-100 rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-7 h-7 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M12 22V12m0 0C12 7 7 5 7 5s0 5 5 7zm0 0c0-5 5-7 5-7s0 5-5 7"/><path d="M5 20h14"/>
+          </svg>
+        </div>
+        <h3 class="font-heading font-semibold text-lg text-text-main mb-2">Drain Cleaning</h3>
+        <p class="text-gray-600 text-sm leading-relaxed mb-4">Slow drains and stubborn clogs eliminated with professional hydro-jetting and snaking. We clear roots, grease, and debris — guaranteed.</p>
+        <ul class="space-y-1.5 text-sm text-gray-500">
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Hydro-Jetting</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Camera Inspection</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Results Guaranteed</li>
+        </ul>
+      </article>
+
+      <!-- Service 3 -->
+      <article class="service-card bg-white border border-gray-200 rounded-2xl p-7 cursor-default" aria-label="Water Heater service">
+        <div class="w-14 h-14 bg-orange-50 border border-orange-100 rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-7 h-7 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M12 2a7 7 0 017 7c0 3.87-2.13 7.25-5 9v2H10v-2C7.13 16.25 5 12.87 5 9a7 7 0 017-7z"/><line x1="8.56" y1="2.75" x2="10.5" y2="6.5"/><line x1="15.44" y1="2.75" x2="13.5" y2="6.5"/>
+          </svg>
+        </div>
+        <h3 class="font-heading font-semibold text-lg text-text-main mb-2">Water Heater Services</h3>
+        <p class="text-gray-600 text-sm leading-relaxed mb-4">Installation, repair, and replacement of traditional tank and tankless water heaters. We work with all major brands and handle permits.</p>
+        <ul class="space-y-1.5 text-sm text-gray-500">
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Tank &amp; Tankless</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Same-Day Install</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Permit Handling</li>
+        </ul>
+      </article>
+
+      <!-- Service 4 -->
+      <article class="service-card bg-white border border-gray-200 rounded-2xl p-7 cursor-default" aria-label="Leak Detection service">
+        <div class="w-14 h-14 bg-teal-50 border border-teal-100 rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-7 h-7 text-teal-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+          </svg>
+        </div>
+        <h3 class="font-heading font-semibold text-lg text-text-main mb-2">Leak Detection</h3>
+        <p class="text-gray-600 text-sm leading-relaxed mb-4">Non-invasive electronic leak detection to pinpoint hidden slab leaks, pipe leaks, and sewer line issues before they become disasters.</p>
+        <ul class="space-y-1.5 text-sm text-gray-500">
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Non-Invasive Tech</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Slab Leak Specialists</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Video Pipe Inspection</li>
+        </ul>
+      </article>
+
+      <!-- Service 5 -->
+      <article class="service-card bg-white border border-gray-200 rounded-2xl p-7 cursor-default" aria-label="Remodeling and Installation service">
+        <div class="w-14 h-14 bg-violet-50 border border-violet-100 rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-7 h-7 text-violet-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        <h3 class="font-heading font-semibold text-lg text-text-main mb-2">Remodeling &amp; Installation</h3>
+        <p class="text-gray-600 text-sm leading-relaxed mb-4">Full bathroom and kitchen plumbing for new construction and remodels. Fixture upgrades, re-piping, and custom plumbing layouts done to code.</p>
+        <ul class="space-y-1.5 text-sm text-gray-500">
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Fixture Installation</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Re-Piping</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>New Construction</li>
+        </ul>
+      </article>
+
+      <!-- Service 6 -->
+      <article class="service-card bg-white border border-gray-200 rounded-2xl p-7 cursor-default" aria-label="Commercial Plumbing service">
+        <div class="w-14 h-14 bg-gray-100 border border-gray-200 rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-7 h-7 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/>
+          </svg>
+        </div>
+        <h3 class="font-heading font-semibold text-lg text-text-main mb-2">Commercial Plumbing</h3>
+        <p class="text-gray-600 text-sm leading-relaxed mb-4">Restaurants, offices, and retail — we handle commercial-grade plumbing systems with minimal disruption to your operations.</p>
+        <ul class="space-y-1.5 text-sm text-gray-500">
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Preventive Maintenance</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Service Contracts</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Code Compliance</li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     ABOUT
+════════════════════════════════════════════════ -->
+<section id="about" class="bg-white py-20 px-4" aria-labelledby="about-heading">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-14 items-center">
+
+      <!-- Left: Visual -->
+      <div class="fade-in order-2 md:order-1">
+        <div class="relative">
+          <div class="bg-surface rounded-3xl p-8 h-80 flex items-center justify-center">
+            <!-- Illustrated placeholder representing a plumber at work -->
+            <div class="text-center">
+              <div class="w-24 h-24 bg-primary/10 border-2 border-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-12 h-12 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                </svg>
+              </div>
+              <p class="font-heading font-semibold text-primary text-lg">JBS Plumbing Team</p>
+              <p class="text-gray-500 text-sm mt-1">Serving Our Community Since 1998</p>
+            </div>
+          </div>
+          <!-- Floating badge -->
+          <div class="absolute -bottom-5 -right-5 bg-white border border-gray-200 shadow-xl rounded-2xl px-5 py-4 flex items-center gap-3">
+            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-heading font-bold text-gray-900 text-sm">BBB Accredited</div>
+              <div class="text-gray-500 text-xs">A+ Rating</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Story -->
+      <div class="fade-in order-1 md:order-2">
+        <span class="inline-block bg-primary/10 text-primary font-semibold text-sm px-4 py-1.5 rounded-full mb-4 uppercase tracking-wider">Our Story</span>
+        <h2 id="about-heading" class="font-heading font-bold text-3xl md:text-4xl text-text-main mb-5 leading-tight">
+          Family-Owned, Community-Trusted for Over 25 Years
+        </h2>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          JBS Plumbing, Inc. was founded in 1998 by James B. Sullivan with a single truck and a commitment to honest, quality work. Today, we're a team of fully licensed master plumbers serving hundreds of homes and businesses across the region.
+        </p>
+        <p class="text-gray-600 leading-relaxed mb-7">
+          We believe every customer deserves transparent pricing, on-time service, and workmanship they can trust. That's not a slogan — it's how we've built our reputation one job at a time.
+        </p>
+        <div class="grid grid-cols-2 gap-4 mb-7">
+          <div class="bg-surface rounded-xl p-4 border border-blue-100">
+            <div class="font-heading font-bold text-2xl text-primary mb-1">100%</div>
+            <div class="text-gray-600 text-sm">Customer Satisfaction Goal</div>
+          </div>
+          <div class="bg-surface rounded-xl p-4 border border-blue-100">
+            <div class="font-heading font-bold text-2xl text-primary mb-1">Master</div>
+            <div class="text-gray-600 text-sm">Licensed Plumbers on Staff</div>
+          </div>
+        </div>
+        <a href="#contact"
+           class="btn-cta inline-flex items-center gap-2 bg-primary text-white font-heading font-semibold px-7 py-3.5 rounded-xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+          Meet the Team
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     WHY CHOOSE US
+════════════════════════════════════════════════ -->
+<section id="why-us" class="bg-surface py-20 px-4" aria-labelledby="why-heading">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-14 fade-in">
+      <span class="inline-block bg-primary/10 text-primary font-semibold text-sm px-4 py-1.5 rounded-full mb-4 uppercase tracking-wider">Why JBS</span>
+      <h2 id="why-heading" class="font-heading font-bold text-3xl md:text-4xl text-text-main mb-4">The JBS Difference</h2>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto">We earn your trust through actions, not promises. Here's what sets us apart.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+
+      <div class="bg-white border border-gray-200 rounded-2xl p-7 flex gap-5 fade-in service-card cursor-default">
+        <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+          <svg class="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-heading font-semibold text-text-main mb-1">On-Time, Every Time</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">We respect your schedule. If we're late, we discount your bill. It's that simple.</p>
+        </div>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-2xl p-7 flex gap-5 fade-in service-card cursor-default">
+        <div class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center flex-shrink-0">
+          <svg class="w-6 h-6 text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-heading font-semibold text-text-main mb-1">Upfront Pricing</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">You approve the price before we start. No surprise charges. No hidden fees. Ever.</p>
+        </div>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-2xl p-7 flex gap-5 fade-in service-card cursor-default">
+        <div class="w-12 h-12 bg-yellow-50 rounded-xl flex items-center justify-center flex-shrink-0">
+          <svg class="w-6 h-6 text-yellow-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-heading font-semibold text-text-main mb-1">4.9-Star Rated</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Over 600 verified 5-star reviews on Google and Yelp. Our customers speak for us.</p>
+        </div>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-2xl p-7 flex gap-5 fade-in service-card cursor-default">
+        <div class="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center flex-shrink-0">
+          <svg class="w-6 h-6 text-purple-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-heading font-semibold text-text-main mb-1">Certified Master Plumbers</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">All technicians are fully licensed, background-checked, and continuously trained.</p>
+        </div>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-2xl p-7 flex gap-5 fade-in service-card cursor-default">
+        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0">
+          <svg class="w-6 h-6 text-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-heading font-semibold text-text-main mb-1">Fully Insured &amp; Bonded</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">$2M liability coverage protects your home and your peace of mind on every job.</p>
+        </div>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-2xl p-7 flex gap-5 fade-in service-card cursor-default">
+        <div class="w-12 h-12 bg-cta/10 rounded-xl flex items-center justify-center flex-shrink-0">
+          <svg class="w-6 h-6 text-cta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-heading font-semibold text-text-main mb-1">Work Guaranteed</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Every repair backed by our 1-year workmanship guarantee. We stand behind our work.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Certification logos band -->
+    <div class="bg-white border border-gray-200 rounded-2xl px-8 py-6 flex flex-wrap items-center justify-center gap-8 text-sm text-gray-500 font-medium fade-in">
+      <div class="flex items-center gap-2">
+        <svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12l2 2 4-4"/></svg>
+        <span>State Licensed</span>
+      </div>
+      <div class="w-px h-5 bg-gray-200 hidden sm:block" aria-hidden="true"></div>
+      <div class="flex items-center gap-2">
+        <svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>BBB Accredited A+</span>
+      </div>
+      <div class="w-px h-5 bg-gray-200 hidden sm:block" aria-hidden="true"></div>
+      <div class="flex items-center gap-2">
+        <svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+        <span>PHCC Member</span>
+      </div>
+      <div class="w-px h-5 bg-gray-200 hidden sm:block" aria-hidden="true"></div>
+      <div class="flex items-center gap-2">
+        <svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        <span>Angi Super Service</span>
+      </div>
+      <div class="w-px h-5 bg-gray-200 hidden sm:block" aria-hidden="true"></div>
+      <div class="flex items-center gap-2">
+        <svg class="w-5 h-5 text-yellow-500" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <span>Google Guaranteed</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     TESTIMONIALS
+════════════════════════════════════════════════ -->
+<section id="testimonials" class="bg-white py-20 px-4" aria-labelledby="testimonials-heading">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-14 fade-in">
+      <span class="inline-block bg-primary/10 text-primary font-semibold text-sm px-4 py-1.5 rounded-full mb-4 uppercase tracking-wider">Customer Reviews</span>
+      <h2 id="testimonials-heading" class="font-heading font-bold text-3xl md:text-4xl text-text-main mb-4">What Our Customers Say</h2>
+      <div class="flex items-center justify-center gap-1 mb-2" aria-label="4.9 out of 5 stars average rating">
+        <svg class="w-6 h-6 text-yellow-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="w-6 h-6 text-yellow-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="w-6 h-6 text-yellow-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="w-6 h-6 text-yellow-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="w-6 h-6 text-yellow-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <p class="text-gray-500 text-sm">4.9 out of 5 — based on 600+ verified reviews</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <article class="testimonial-card bg-surface border border-blue-100 rounded-2xl p-7 fade-in" aria-label="Review from Margaret T.">
+        <div class="flex items-center gap-1 mb-4" aria-hidden="true">
+          <svg class="w-4 h-4 text-yellow-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-4 h-4 text-yellow-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-4 h-4 text-yellow-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-4 h-4 text-yellow-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-4 h-4 text-yellow-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <blockquote class="text-gray-700 text-sm leading-relaxed italic mb-5">
+          "Our pipe burst at 2 AM on a Sunday. JBS had a technician at our door within 45 minutes. He was professional, explained everything clearly, and had us back to normal before sunrise. Absolutely incredible service."
+        </blockquote>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center font-heading font-bold text-primary text-sm flex-shrink-0" aria-hidden="true">MT</div>
+          <div>
+            <div class="font-heading font-semibold text-gray-900 text-sm">Margaret T.</div>
+            <div class="text-gray-500 text-xs">Homeowner · Google Review ✓ Verified</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="testimonial-card bg-surface border border-blue-100 rounded-2xl p-7 fade-in" aria-label="Review from Robert K.">
+        <div class="flex items-center gap-1 mb-4" aria-hidden="true">
+          <svg class="w-4 h-4 text-yellow-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-4 h-4 text-yellow-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-4 h-4 text-yellow-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-4 h-4 text-yellow-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-4 h-4 text-yellow-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <blockquote class="text-gray-700 text-sm leading-relaxed italic mb-5">
+          "JBS replaced all the pipes in our 1960s home. The crew was clean, efficient, and finished two days ahead of schedule. The quote was exactly what we paid — no games. We're customers for life."
+        </blockquote>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-secondary/20 rounded-full flex items-center justify-center font-heading font-bold text-secondary text-sm flex-shrink-0" aria-hidden="true">RK</div>
+          <div>
+            <div class="font-heading font-semibold text-gray-900 text-sm">Robert K.</div>
+            <div class="text-gray-500 text-xs">Homeowner · Yelp Review ✓ Verified</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="testimonial-card bg-surface border border-blue-100 rounded-2xl p-7 fade-in" aria-label="Review from Sandra L.">
+        <div class="flex items-center gap-1 mb-4" aria-hidden="true">
+          <svg class="w-4 h-4 text-yellow-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-4 h-4 text-yellow-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-4 h-4 text-yellow-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-4 h-4 text-yellow-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-4 h-4 text-yellow-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <blockquote class="text-gray-700 text-sm leading-relaxed italic mb-5">
+          "We've used JBS for our restaurant for three years on a service contract. They've never let us down. Preventive maintenance has saved us from two potential disasters. Worth every penny."
+        </blockquote>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-cta/20 rounded-full flex items-center justify-center font-heading font-bold text-cta text-sm flex-shrink-0" aria-hidden="true">SL</div>
+          <div>
+            <div class="font-heading font-semibold text-gray-900 text-sm">Sandra L.</div>
+            <div class="text-gray-500 text-xs">Restaurant Owner · Google Review ✓ Verified</div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     EMERGENCY CTA BAND
+════════════════════════════════════════════════ -->
+<section class="bg-cta py-16 px-4" aria-label="Emergency plumbing call to action">
+  <div class="max-w-4xl mx-auto text-center fade-in">
+    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-5">
+      <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+      </svg>
+    </div>
+    <h2 class="font-heading font-bold text-3xl md:text-4xl text-white mb-4">Plumbing Emergency? Don't Wait.</h2>
+    <p class="text-orange-100 text-lg mb-8 max-w-xl mx-auto">Every minute counts when water is flowing where it shouldn't. Our emergency team is standing by — 24 hours a day, 365 days a year.</p>
+    <a href="tel:+15551234567"
+       class="inline-flex items-center gap-3 bg-white text-cta font-heading font-bold text-xl px-10 py-5 rounded-2xl cursor-pointer hover:bg-orange-50 transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-white/50 shadow-2xl">
+      <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14z"/>
+      </svg>
+      Call (555) 123-4567 Now
+    </a>
+    <p class="text-orange-200 text-sm mt-4">Average response time: under 60 minutes</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     CONTACT FORM
+════════════════════════════════════════════════ -->
+<section id="contact" class="bg-surface py-20 px-4" aria-labelledby="contact-heading">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-14 items-start">
+
+      <!-- Left: Contact info -->
+      <div class="fade-in">
+        <span class="inline-block bg-primary/10 text-primary font-semibold text-sm px-4 py-1.5 rounded-full mb-4 uppercase tracking-wider">Get in Touch</span>
+        <h2 id="contact-heading" class="font-heading font-bold text-3xl md:text-4xl text-text-main mb-5">Request a Free Estimate</h2>
+        <p class="text-gray-600 leading-relaxed mb-8">Fill out the form and we'll get back to you within 2 hours during business hours. For emergencies, call us directly.</p>
+
+        <div class="space-y-5 mb-8">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-heading font-semibold text-gray-900 mb-0.5">Phone</div>
+              <a href="tel:+15551234567" class="text-primary hover:text-secondary transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-primary rounded">(555) 123-4567</a>
+              <div class="text-gray-500 text-xs mt-0.5">24/7 Emergency Line</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-heading font-semibold text-gray-900 mb-0.5">Email</div>
+              <a href="mailto:info@jbsplumbing.com" class="text-primary hover:text-secondary transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-primary rounded">info@jbsplumbing.com</a>
+              <div class="text-gray-500 text-xs mt-0.5">Reply within 2 hours</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-heading font-semibold text-gray-900 mb-0.5">Service Area</div>
+              <div class="text-gray-600 text-sm">Metro area &amp; surrounding counties</div>
+              <div class="text-gray-500 text-xs mt-0.5">50-mile service radius</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-heading font-semibold text-gray-900 mb-0.5">Business Hours</div>
+              <div class="text-gray-600 text-sm">Mon–Fri: 7AM – 7PM</div>
+              <div class="text-gray-600 text-sm">Sat: 8AM – 5PM</div>
+              <div class="text-gray-500 text-xs mt-0.5">Emergency: 24/7</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="fade-in">
+        <form id="contact-form" class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm" novalidate aria-label="Contact form">
+          <div class="grid sm:grid-cols-2 gap-5 mb-5">
+            <div>
+              <label for="first-name" class="block text-sm font-semibold text-gray-700 mb-1.5">First Name <span aria-hidden="true" class="text-red-500">*</span></label>
+              <input type="text" id="first-name" name="first-name" required autocomplete="given-name"
+                     class="input-field w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-900 text-sm placeholder-gray-400 bg-white"
+                     placeholder="James" aria-required="true" />
+            </div>
+            <div>
+              <label for="last-name" class="block text-sm font-semibold text-gray-700 mb-1.5">Last Name <span aria-hidden="true" class="text-red-500">*</span></label>
+              <input type="text" id="last-name" name="last-name" required autocomplete="family-name"
+                     class="input-field w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-900 text-sm placeholder-gray-400 bg-white"
+                     placeholder="Sullivan" aria-required="true" />
+            </div>
+          </div>
+          <div class="mb-5">
+            <label for="phone" class="block text-sm font-semibold text-gray-700 mb-1.5">Phone Number <span aria-hidden="true" class="text-red-500">*</span></label>
+            <input type="tel" id="phone" name="phone" required autocomplete="tel"
+                   class="input-field w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-900 text-sm placeholder-gray-400 bg-white"
+                   placeholder="(555) 000-0000" aria-required="true" />
+          </div>
+          <div class="mb-5">
+            <label for="email" class="block text-sm font-semibold text-gray-700 mb-1.5">Email Address</label>
+            <input type="email" id="email" name="email" autocomplete="email"
+                   class="input-field w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-900 text-sm placeholder-gray-400 bg-white"
+                   placeholder="james@example.com" />
+          </div>
+          <div class="mb-5">
+            <label for="service" class="block text-sm font-semibold text-gray-700 mb-1.5">Service Needed <span aria-hidden="true" class="text-red-500">*</span></label>
+            <select id="service" name="service" required
+                    class="input-field w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-900 text-sm bg-white cursor-pointer appearance-none"
+                    aria-required="true">
+              <option value="" disabled selected>Select a service...</option>
+              <option value="emergency">Emergency Repair</option>
+              <option value="drain">Drain Cleaning</option>
+              <option value="water-heater">Water Heater</option>
+              <option value="leak">Leak Detection</option>
+              <option value="remodel">Remodeling / Installation</option>
+              <option value="commercial">Commercial Plumbing</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="mb-6">
+            <label for="message" class="block text-sm font-semibold text-gray-700 mb-1.5">Describe the Issue <span aria-hidden="true" class="text-red-500">*</span></label>
+            <textarea id="message" name="message" required rows="4"
+                      class="input-field w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-900 text-sm placeholder-gray-400 bg-white resize-none"
+                      placeholder="Tell us what's happening and we'll recommend the best solution..." aria-required="true"></textarea>
+          </div>
+
+          <div id="form-success" class="hidden bg-green-50 border border-green-200 rounded-xl px-5 py-4 mb-5 flex items-center gap-3" role="alert" aria-live="polite">
+            <svg class="w-5 h-5 text-green-600 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <p class="text-green-800 text-sm font-medium">Thank you! We'll be in touch within 2 hours.</p>
+          </div>
+          <div id="form-error" class="hidden bg-red-50 border border-red-200 rounded-xl px-5 py-4 mb-5" role="alert" aria-live="polite">
+            <p class="text-red-700 text-sm font-medium">Please fill in all required fields.</p>
+          </div>
+
+          <button type="submit" id="submit-btn"
+                  class="btn-cta w-full bg-cta text-white font-heading font-bold text-lg py-4 rounded-xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-cta focus:ring-offset-2 flex items-center justify-center gap-2">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+            Send My Free Estimate Request
+          </button>
+          <p class="text-center text-gray-500 text-xs mt-3">We never share your information. Privacy guaranteed.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════ -->
+<footer class="bg-gray-900 text-white" aria-label="Site footer">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+
+      <!-- Brand -->
+      <div class="lg:col-span-1">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 12h8M12 8v8"/>
+            </svg>
+          </div>
+          <div>
+            <div class="font-heading font-bold text-white text-lg leading-none">JBS Plumbing</div>
+            <div class="text-gray-400 text-xs">Inc. — Est. 1998</div>
+          </div>
+        </div>
+        <p class="text-gray-400 text-sm leading-relaxed mb-5">Licensed, insured plumbing experts serving our community with integrity for over 25 years.</p>
+        <div class="flex gap-3">
+          <a href="#" class="w-9 h-9 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary" aria-label="Facebook">
+            <svg class="w-4 h-4 text-gray-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="#" class="w-9 h-9 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary" aria-label="Google Reviews">
+            <svg class="w-4 h-4 text-gray-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          </a>
+          <a href="#" class="w-9 h-9 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary" aria-label="Yelp">
+            <svg class="w-4 h-4 text-gray-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.16 12.594l-4.995 1.433c-.96.275-1.755-.483-1.486-1.438l1.382-4.695c.154-.521.758-.639 1.133-.26l4.18 4.26c.41.418.23 1.01-.214 1.7zM13.27 6.26c-.088-.928.688-1.658 1.607-1.43l4.882 1.22c.468.115.65.685.345 1.083L17.16 10.4c-.5.655-1.44.594-1.888-.13L13.3 7.023a1.5 1.5 0 01-.03-.764zM10.963 21.952c-.356.88-1.46 1.124-2.11.463L5.72 19.17c-.36-.37-.288-.985.163-1.248l4.554-2.637c.82-.476 1.784.202 1.608 1.14l-.082 5.527zM9.24 13.57l-5.148.6c-.964.112-1.633-.87-1.147-1.71l2.5-4.376c.24-.42.797-.48 1.117-.12l3.64 4.066c.377.42.22 1.065-.32 1.44l-.642-.9zm1.094-3.476L7.344 5.57c-.374-.836.19-1.77 1.11-1.806l5.028-.19c.488-.018.84.473.66.93l-2.017 5.04c-.32.803-1.382.836-1.79.55z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h3 class="font-heading font-semibold text-white text-sm uppercase tracking-widest mb-4">Services</h3>
+        <ul class="space-y-2.5 text-sm text-gray-400">
+          <li><a href="#services" class="hover:text-white transition-colors duration-150 focus:outline-none focus:ring-1 focus:ring-gray-500 rounded cursor-pointer">Emergency Repairs</a></li>
+          <li><a href="#services" class="hover:text-white transition-colors duration-150 focus:outline-none focus:ring-1 focus:ring-gray-500 rounded cursor-pointer">Drain Cleaning</a></li>
+          <li><a href="#services" class="hover:text-white transition-colors duration-150 focus:outline-none focus:ring-1 focus:ring-gray-500 rounded cursor-pointer">Water Heater Services</a></li>
+          <li><a href="#services" class="hover:text-white transition-colors duration-150 focus:outline-none focus:ring-1 focus:ring-gray-500 rounded cursor-pointer">Leak Detection</a></li>
+          <li><a href="#services" class="hover:text-white transition-colors duration-150 focus:outline-none focus:ring-1 focus:ring-gray-500 rounded cursor-pointer">Remodeling &amp; Install</a></li>
+          <li><a href="#services" class="hover:text-white transition-colors duration-150 focus:outline-none focus:ring-1 focus:ring-gray-500 rounded cursor-pointer">Commercial Plumbing</a></li>
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <h3 class="font-heading font-semibold text-white text-sm uppercase tracking-widest mb-4">Company</h3>
+        <ul class="space-y-2.5 text-sm text-gray-400">
+          <li><a href="#about" class="hover:text-white transition-colors duration-150 focus:outline-none focus:ring-1 focus:ring-gray-500 rounded cursor-pointer">About Us</a></li>
+          <li><a href="#why-us" class="hover:text-white transition-colors duration-150 focus:outline-none focus:ring-1 focus:ring-gray-500 rounded cursor-pointer">Why Choose Us</a></li>
+          <li><a href="#testimonials" class="hover:text-white transition-colors duration-150 focus:outline-none focus:ring-1 focus:ring-gray-500 rounded cursor-pointer">Reviews</a></li>
+          <li><a href="#contact" class="hover:text-white transition-colors duration-150 focus:outline-none focus:ring-1 focus:ring-gray-500 rounded cursor-pointer">Contact</a></li>
+          <li><a href="#" class="hover:text-white transition-colors duration-150 focus:outline-none focus:ring-1 focus:ring-gray-500 rounded cursor-pointer">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h3 class="font-heading font-semibold text-white text-sm uppercase tracking-widest mb-4">Contact</h3>
+        <ul class="space-y-3 text-sm text-gray-400">
+          <li class="flex items-start gap-2">
+            <svg class="w-4 h-4 text-cta flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14z"/>
+            </svg>
+            <a href="tel:+15551234567" class="hover:text-white transition-colors duration-150 focus:outline-none focus:ring-1 focus:ring-gray-500 rounded">(555) 123-4567</a>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-4 h-4 text-gray-500 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <a href="mailto:info@jbsplumbing.com" class="hover:text-white transition-colors duration-150 focus:outline-none focus:ring-1 focus:ring-gray-500 rounded">info@jbsplumbing.com</a>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-4 h-4 text-gray-500 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+            </svg>
+            <span>Mon–Fri 7AM–7PM<br/>Sat 8AM–5PM<br/><span class="text-cta font-medium">Emergency: 24/7</span></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+      <p>&copy; 2026 JBS Plumbing, Inc. All rights reserved.</p>
+      <div class="flex items-center gap-4">
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          State Licensed
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Fully Insured
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-yellow-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          BBB A+ Rated
+        </span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════
+     SCRIPTS
+════════════════════════════════════════════════ -->
+<script>
+  // Mobile nav toggle
+  const menuBtn  = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('menu-icon-open');
+  const iconClose = document.getElementById('menu-icon-close');
+
+  menuBtn.addEventListener('click', () => {
+    const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+    menuBtn.setAttribute('aria-expanded', String(!expanded));
+    mobileMenu.classList.toggle('hidden');
+    iconOpen.classList.toggle('hidden');
+    iconClose.classList.toggle('hidden');
+  });
+
+  // Close mobile menu on link click
+  document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Scroll fade-in observer
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Contact form validation & submission
+  const form = document.getElementById('contact-form');
+  const submitBtn = document.getElementById('submit-btn');
+  const formSuccess = document.getElementById('form-success');
+  const formError = document.getElementById('form-error');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    formError.classList.add('hidden');
+    formSuccess.classList.add('hidden');
+
+    const firstName = document.getElementById('first-name').value.trim();
+    const phone     = document.getElementById('phone').value.trim();
+    const service   = document.getElementById('service').value;
+    const message   = document.getElementById('message').value.trim();
+
+    if (!firstName || !phone || !service || !message) {
+      formError.classList.remove('hidden');
+      formError.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      return;
+    }
+
+    // Simulate submission
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    setTimeout(() => {
+      formSuccess.classList.remove('hidden');
+      form.reset();
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = `
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+        </svg>
+        Send My Free Estimate Request`;
+      formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }, 1200);
+  });
+</script>
+
+</body>
+</html>
